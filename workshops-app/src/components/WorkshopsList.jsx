@@ -1,6 +1,17 @@
+import { useEffect } from 'react';
+
 const WorkshopsList = () => {
+    // this function will execute on load
+    useEffect(
+        () => {
+            console.log( 'function passed to useEffect executed' );
+        }
+    );
+
+    console.log( 'about to return from rendering function' );
+
     return (
-        <div>This is the list of workshops</div>
+        <div>We are fetching workshops. Please wait...</div>
     );
 }
  
