@@ -1,6 +1,13 @@
-const Home = () => {
+const Home = ( props ) => {
+    console.log( props );
+
     return (
-        <div>This is home</div>
+        <div>
+            {props.message + '!'}
+
+            <h2>Children...</h2>
+            {props.children}
+        </div>
     );
 };
 
