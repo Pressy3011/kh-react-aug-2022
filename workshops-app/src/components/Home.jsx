@@ -1,29 +1,18 @@
-const Home = ( props ) => {
-    console.log( props );
-
+const Home = () => {
     return (
-        <div>
-            {props.message + '!'}
+        <div className="container">
+            <h1>Workshops App</h1>
+            <hr />
 
-            <h2>Children...</h2>
-            {props.children}
+            <p>
+                The Workshops application serves details of (fictitious) technical workshops happening in various cities. Every workshop has a broad topic (eg. JavaScript), and a workshop has many sessions (each session covers a sub-topic, eg. Closures in JavaScript).
+            </p>
+
+            <p>
+                You can view a list of workshops, details of every workshop, sessions in a workshop, and also add a new session for a workshop.
+            </p>
         </div>
-    );
+    )
 };
 
-const a = 'I am a';
-
-// 2 forms of export
-    // default export
-    // named export
-// export { // named export
-//     a,
-//     b
-// };
-
-// You can have ONLY 1 default export
 export default Home;
-
-export {
-    a
-};
