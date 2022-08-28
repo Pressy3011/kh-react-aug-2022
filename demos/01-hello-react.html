@@ -1,0 +1,54 @@
+<!-- ! -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hello react</title>
+    </head>
+    <body>
+        <div id="root">
+            <!-- 
+                <div id="message">
+                    Hello <strong>React</strong>. How are you?
+                </div>
+            -->
+        </div>
+
+        <!-- core of React -->
+        <!-- helps define the UI -->
+        <!-- like an architect -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+        <!-- React DOM -->
+        <!-- only for web apps -->
+        <!-- ceates the page elements form the UI defined using React -->
+        <!-- like a builder -->
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+        <script>
+            // we can have only 1 HTML lement at the top-level
+            // we create a React element - definition of the UI
+            const messageEl = React.createElement(
+                'div', // name of the element
+                { // attributes / props
+                    id: 'message'
+                },
+                'Hello ',
+                React.createElement(
+                    'strong',
+                    null, // or {}
+                    'React'
+                ),
+                '. How are you?'
+            );
+
+            console.log( messageEl );
+
+            // where to build the UI
+            const root = ReactDOM.createRoot( document.getElementById( 'root' ) );
+            root.render( messageEl );
+        </script>
+    </body>
+</html>
