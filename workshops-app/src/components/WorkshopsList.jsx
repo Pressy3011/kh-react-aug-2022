@@ -38,7 +38,15 @@ const WorkshopsList = () => {
             }
             {
                 loading === false && (
-                    <div>We have fetched {workshops.length} workshops</div>
+                    <ol>
+                        {
+                            workshops.map(
+                                ( workshop ) => {
+                                    return <li>{workshop.name}</li>
+                                }
+                            )
+                        }
+                    </ol>
                 )
             }
         </div>
