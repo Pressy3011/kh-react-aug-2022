@@ -1,0 +1,33 @@
+<!-- ! -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hello JSX</title>
+    </head>
+    <body>
+        <div id="root"></div>
+
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.18.13/babel.js"></script>
+
+        <script type="text/babel">
+            // JSX is like HTML in JavaScript
+            // It is not HTML. It is an extension to the JavaScript language. It is understood by Babel.
+            const messageEl = (
+                <div id="message">
+                    Hello <strong>React</strong>. How are you?
+                </div>
+            );
+
+            console.log( messageEl );
+
+            // where to build the UI
+            const root = ReactDOM.createRoot( document.getElementById( 'root' ) );
+            root.render( messageEl );
+        </script>
+    </body>
+</html>
