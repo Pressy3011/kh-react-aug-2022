@@ -50,24 +50,26 @@ const WorkshopsList = () => {
                 <Alert variant="danger">{error.message}</Alert>
             )}
             {loading === false && error === null && (
-                <div>
+                <div className="row">
                     {workshops.map((workshop) => {
                         return (
-                            <Card style={{ width: "18rem" }} key={workshop.id}>
-                                <Card.Img
-                                    variant="top"
-                                    src={workshop.imageUrl}
-                                />
-                                <Card.Body>
-                                    <Card.Title>{workshop.name}</Card.Title>
-                                    <Card.Text>
-                                        {workshop.startDate} - {workshop.endDate}
-                                    </Card.Text>
-                                    <Button variant="primary">
-                                        Know more
-                                    </Button>
-                                </Card.Body>
-                            </Card>
+                            <div className="col-12 col-md-6 col-lg-4 col-xl-3 d-flex">
+                                <Card className="w-100 p-4 my-3" key={workshop.id}>
+                                    <Card.Img
+                                        variant="top"
+                                        src={workshop.imageUrl}
+                                    />
+                                    <Card.Body>
+                                        <Card.Title>{workshop.name}</Card.Title>
+                                        <Card.Text>
+                                            {workshop.startDate} - {workshop.endDate}
+                                        </Card.Text>
+                                        <Button variant="primary">
+                                            Know more
+                                        </Button>
+                                    </Card.Body>
+                                </Card>
+                            </div>
                         );
                     })}
                 </div>
